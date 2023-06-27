@@ -1,4 +1,4 @@
-
+// initial endpoint, filter object and currency format
 (function(window){
     "use strict";
 
@@ -38,20 +38,20 @@
         "employees": [
             {
                 "employee_code": "2Rlo8rxLgLfEvafhWGeWe3pQwfm",
-                "first_name": "Kongsak",
-                "last_name": "Limpitikeat",
+                "first_name": "John",
+                "last_name": "Doe",
                 "age": 40,
-                "email": "keng@mymail.com",
+                "email": "john@mymail.com",
                 "department": "IT",
                 "salary": 20000
             },
             {
 
                 "employee_code": "2Rlo8rxLgLfEvafhWGeWe3pQwfy",
-                "first_name": "Pheerawit",
-                "last_name": "Wasinphongwanit",
+                "first_name": "Michale",
+                "last_name": "Angelo",
                 "age": 40,
-                "email": "pheerawit@mymail.com",
+                "email": "michale@mymail.com",
                 "department": "IT",
                 "salary": 10000
             }
@@ -79,6 +79,7 @@
 })(window);
 
 
+// Modal Detail
 (function(window) {
     "use strict";
 
@@ -87,12 +88,12 @@
     const modalDetailInstance = window.modalDetailInstance || bootstrap.Modal.getOrCreateInstance(modalDetailElem) || {};
 
     modalDetailElem.setData = function(data) {
-        this.querySelector("[data-modal-detail='first-name']").text = data.first_name;
-        this.querySelector("[data-modal-detail='last-name']").text = data.last_name;
-        this.querySelector("[data-modal-detail='salary']").text = window.thIntl.format(data.salary);
-        this.querySelector("[data-modal-detail='age']").text = data.age;
-        this.querySelector("[data-modal-detail='email']").text = data.email;
-        this.querySelector("[data-modal-detail='department']").text = data.department;
+        this.querySelector("span[data-modal-detail='first-name']").innerText = data.first_name;
+        this.querySelector("span[data-modal-detail='last-name']").innerText = data.last_name;
+        this.querySelector("span[data-modal-detail='salary']").innerText = window.thIntl.format(data.salary);
+        this.querySelector("span[data-modal-detail='age']").innerText = data.age;
+        this.querySelector("span[data-modal-detail='email']").innerText = data.email;
+        this.querySelector("span[data-modal-detail='department']").innerText = data.department;
     }
 
 
@@ -106,7 +107,7 @@
 
 
 
-
+// Modal New Employee Form
 (function(window) {
     "use strict";
 

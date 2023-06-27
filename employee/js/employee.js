@@ -75,7 +75,8 @@
             setTimeout(function () {
                 searchElementCheckEnable = true;
             }, timeout * 1000);
-            if (this.keyCode === 13 && (this.length > 3 || this.length === 0)) {
+
+            if (event.key === 'Enter' && (this.value.length > 3 || this.value.length === 0)) {
                 searchElementCheckEnable = false;
                 searchElementEventListener.forEach(callback => callback(this.value));
             }
@@ -122,6 +123,7 @@
     "use strict";
 
     let offset = 0;
+    let pageSize = window.filterObject.option.limit;
     const controller = window.controller || {};
 
     controller.search = function (keyword) {
@@ -133,6 +135,8 @@
                     "value": keyword
                 }
             ];
+        } else {
+            window.filterObject.filters = [];
         }
         window.filterObject.option.offset = offset;
 
@@ -150,7 +154,7 @@
     }
 
     controller.loadmore = function () {
-        offset += 1;
+        offset += pageSize;
         window.filterObject.option.offset = offset;
         window.api.post(window.endpoint.filterEmployee, window.filterObject, function (data) {
             if (data.data.employees.length > 0) {

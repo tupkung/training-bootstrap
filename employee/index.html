@@ -123,16 +123,15 @@
     </div>
 </div>
 
-<div class="modal fade" id="modalNewEmployee" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+<div class="modal fade" id="modalNewEmployee" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="needs-validation" novalidate>
             <div class="modal-header">
                 <h5 class="modal-title">New employee</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-
                     <div class="col">
                         <label for="validationCustom01" class="form-label">First name</label>
                         <input type="text" class="form-control" id="validationCustom01" name="first_name" value="" required>
@@ -140,35 +139,35 @@
                             first name is required
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mt-3">
                         <label for="validationCustom02" class="form-label">Last name</label>
                         <input type="text" class="form-control" id="validationCustom02" name="last_name" value="" required>
                         <div class="invalid-feedback">
                             last name is required
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mt-3">
                         <label for="validationCustomEmail" class="form-label">Email</label>
                         <input type="email" class="form-control" id="validationCustomEmail" name="email" required>
                         <div class="invalid-feedback">
                             email is required
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mt-3">
                         <label for="validationCustom04" class="form-label">Age</label>
                         <input type="number" class="form-control" id="validationCustom04" name="age" required>
                         <div class="invalid-feedback">
                             age is required
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mt-3">
                         <label for="validationCustom05" class="form-label">Department</label>
                         <input type="text" class="form-control" id="validationCustom05" name="department" required>
                         <div class="invalid-feedback">
                             department is required
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mt-3">
                         <label for="validationCustom03" class="form-label">Salary</label>
                         <input type="number" class="form-control" id="validationCustom03" name="salary" required>
                         <div class="invalid-feedback">
